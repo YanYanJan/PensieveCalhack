@@ -89,7 +89,6 @@ public class Memory extends AppCompatActivity {
                 Intent audioIntent = new Intent(mContext, AudioCreate.class);
                 startActivity(audioIntent);
         }
-
     }
 
     private void startAnim() {

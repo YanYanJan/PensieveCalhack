@@ -37,9 +37,8 @@ public class Create extends AppCompatActivity {
     private ImageButton chooseImage, takePicture;
     public static final int CAMERA_REQUEST = 1888;
     public static final int GALLERY_REQUEST = 1889;
-    private static final int REQUEST_CODE=123;
+    private static final int REQUEST_CODE = 123;
     private ImageView imageview;
-    private byte[] bookCoverBlob;
     private Button submit;
 
     @Override
@@ -121,13 +120,14 @@ public class Create extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imageview.setImageBitmap(imageBitmap);
-
+            /*
             try {
                 //bookCoverBlob = ImageUtils.getImageBytes(photo);
             }
             catch (NullPointerException e){
                 Toast.makeText(this, "Take or choose a picture please.", Toast.LENGTH_LONG).show();
             }
+            */
         }
         else if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK){
             try {
@@ -135,12 +135,14 @@ public class Create extends AppCompatActivity {
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                 imageview.setImageBitmap(selectedImage);
-//                try {
-//                    bookCoverBlob = ImageUtils.getBytes(imageStream);
-//                }
-//                catch(IOException e){
-//                    Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
-//                }
+                /*
+                try {
+                    bookCoverBlob = ImageUtils.getBytes(imageStream);
+                }
+                catch(IOException e){
+                    Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
+                }
+                */
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
