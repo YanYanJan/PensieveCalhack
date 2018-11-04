@@ -6,4 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/Photo"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Photo"
+        android:id="@+id/button_group">
+        <ImageButton
+            android:id="@+id/image_select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <ImageButton
+            android:id="@+id/camera_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="220dp"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/submit_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:text="@string/submit" />
 </RelativeLayout>

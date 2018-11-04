@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Pensieve</string>
     <string name="title_home">Geographic</string>
-    <string name="title_dashboard">Locked</string>
+    <string name="title_dashboard">Unread</string>
     <string name="title_notifications">Memories</string>
+    <string name="submit">Submit</string>
+    <string name="create">Add Memory</string>
+    <string name="Date">date</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
