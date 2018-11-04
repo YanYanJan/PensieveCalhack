@@ -97,8 +97,7 @@ public class Memory extends AppCompatActivity {
             PropertyValuesHolder h2 = PropertyValuesHolder.ofFloat("translationY", 0, (float) Math.cos(angle * 1.57 / 90) * 200);
             ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(imageViewList.get(i), h1, h2);
             animator.setDuration(1000);
-            animator.setFrameDelay(500 * i);
-            animator.setInterpolator(new BounceInterpolator());
+            //animator.setInterpolator(new BounceInterpolator());
             animator.start();
             isMenuOpen = true;
         }
