@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Pensieve</string>
-    <string name="title_home">Geographic</string>
-    <string name="title_dashboard">Unread</string>
-    <string name="title_notifications">Memories</string>
+    <string name="title_geo">Geographic</string>
+    <string name="title_unread">Unread</string>
+    <string name="title_memo">Memories</string>
     <string name="submit">Submit</string>
     <string name="create">Add Memory</string>
     <string name="Date">date</string>
