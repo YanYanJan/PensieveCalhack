@@ -30,7 +30,7 @@ import java.util.Date;
  * Created by yanyan on 11/3/18.
  */
 
-public class Create extends AppCompatActivity {
+public class CameraCreate extends AppCompatActivity {
     private Context mContext;
     private Activity mActivity;
     private Databasehelper myDb;
@@ -45,10 +45,10 @@ public class Create extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(R.string.create);
-        setContentView(R.layout.create);
+        setContentView(R.layout.camera_create);
 
         mContext = this;
-        mActivity = Create.this;
+        mActivity = CameraCreate.this;
 
         imageview = findViewById(R.id.Photo);
         chooseImage = findViewById(R.id.image_select_button);
@@ -93,8 +93,8 @@ public class Create extends AppCompatActivity {
                 String location = null;
                 myDb.insertData(datetime, thought ,photo, vedio, audio,location);
 
-                Toast.makeText(Create.this, "New Post Submitted!", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Create.this, Memory.class);
+                Toast.makeText(CameraCreate.this, "New Memory Saved:)", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(CameraCreate.this, Memory.class);
                 startActivity(intent);
 
 

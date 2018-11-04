@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Memory"></activity>
-        <activity android:name=".Create"></activity>
+        <activity android:name=".CameraCreate"></activity>
         <activity android:name=".AudioCreate"></activity>
     </application>
 

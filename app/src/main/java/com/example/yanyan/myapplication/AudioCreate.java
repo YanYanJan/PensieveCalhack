@@ -36,15 +36,17 @@ public class AudioCreate extends AppCompatActivity {
         play.setEnabled(false);
         stop = (Button)findViewById(R.id.stop);
         stop.setEnabled(false);
+
+        requestPermission();
     }
 
     private void clickView(View view) {
         if (view.getId() == R.id.mic) {
             if (checkPermission()) {
                 if (!isRecording) {
-                    pathSave = Environment.getExternalStorageDirectory()
+                    /*pathSave = Environment.getExternalStorageDirectory()
                             .getAbsolutePath() + "/"
-                            + UUID.randomUUID().toString() + "_audio_record.3gp";
+                            + UUID.randomUUID().toString() + "_audio_record.3gp";*/
                     setupMediaRecorder();
                     try {
                         mediaRecorder.prepare();
@@ -58,6 +60,7 @@ public class AudioCreate extends AppCompatActivity {
 
                 } else {
                     mediaRecorder.stop();
+                    isRecording = false;
                     play.setEnabled(true);
                 }
             } else {

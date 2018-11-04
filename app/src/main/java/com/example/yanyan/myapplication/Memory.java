@@ -83,7 +83,7 @@ public class Memory extends AppCompatActivity {
                 }
                 break;
             case R.id.cameraMem:
-                Intent cameraIntent = new Intent(mContext, Create.class);
+                Intent cameraIntent = new Intent(mContext, CameraCreate.class);
                 startActivity(cameraIntent);
             case R.id.audioMem:
                 Intent audioIntent = new Intent(mContext, AudioCreate.class);
